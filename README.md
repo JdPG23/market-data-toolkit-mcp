@@ -28,7 +28,7 @@ Auth is OAuth in the browser (an [Apify](https://apify.com) account, free tier w
 
 Want fewer tools? Keep only the slugs you need in the `?tools=` list. Also published on [Smithery](https://smithery.ai/server/@jl-depablos/market-data-toolkit).
 
-## The tools
+## Tools
 
 ### Pricing and resale
 
