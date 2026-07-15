@@ -1,6 +1,6 @@
 # Market Data Toolkit (MCP)
 
-17 live market-data tools for AI agents, served over the [Model Context Protocol](https://modelcontextprotocol.io). One URL connects your agent to real eBay sold prices, luxury watch market analysis, company KYC for the UK and Spain, SEC filings, patents, trademarks, government contracts and public auctions.
+18 live market-data tools for AI agents, served over the [Model Context Protocol](https://modelcontextprotocol.io). One URL connects your agent to real eBay sold prices, luxury watch market analysis, company KYC for the UK and Spain, SEC filings, patents, trademarks, government contracts and public auctions.
 
 This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.com/jdepablos) behind the Apify MCP gateway. There is nothing to install or host. Every tool queries its source live at request time and returns clean, typed JSON.
 
@@ -12,7 +12,7 @@ This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.c
 {
   "mcpServers": {
     "market-data-toolkit": {
-      "url": "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/companies-house-feed"
+      "url": "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/companies-house-feed"
     }
   }
 }
@@ -21,7 +21,7 @@ This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.c
 **Claude Code**:
 
 ```bash
-claude mcp add --transport http market-data-toolkit "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/companies-house-feed"
+claude mcp add --transport http market-data-toolkit "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/companies-house-feed"
 ```
 
 Auth is OAuth in the browser (an [Apify](https://apify.com) account, free tier works). You can also pass a token header instead: `Authorization: Bearer <APIFY_TOKEN>`.
@@ -36,6 +36,7 @@ Want fewer tools? Keep only the slugs you need in the `?tools=` list. Also publi
 |---|---|
 | [eBay Sold Price Appraiser](https://apify.com/jdepablos/ebay-sold-price-appraiser) | Real market value of any item from confirmed eBay sold listings: median, percentiles, trend, liquidity, cleaned comps. |
 | [Second-hand Deal Scanner](https://apify.com/jdepablos/second-hand-deal-scanner-es) | Underpriced listings on Vinted, Wallapop and Milanuncios vs real eBay sold values, ranked by estimated profit (ES/FR/DE/IT/UK). |
+| [Vinted Search Feed](https://apify.com/jdepablos/vinted-search-feed) | Clean Vinted listings and a price snapshot (median, quartiles) for any query, across 9 European markets. |
 | [Pokemon Card Price Checker](https://apify.com/jdepablos/pokemon-card-price-checker) | What a Pokemon card is actually worth, from confirmed sold listings. |
 | [Chrono24 Watch Analyzer](https://apify.com/jdepablos/chrono24-watch-analyzer) | Market analysis for any luxury watch: median asking price, percentiles, market depth, dealer mix. |
 | [Catawiki Deal Finder](https://apify.com/jdepablos/catawiki-deal-finder) | Live auction lots trading below Catawiki's own expert estimates. |
