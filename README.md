@@ -1,6 +1,6 @@
 # Market Data Toolkit (MCP)
 
-19 live market-data tools for AI agents, served over the [Model Context Protocol](https://modelcontextprotocol.io). One URL connects your agent to real eBay sold prices, luxury watch market analysis, company KYC for the UK and Spain, SEC filings, patents, trademarks, government contracts and public auctions.
+20 live market-data tools for AI agents, served over the [Model Context Protocol](https://modelcontextprotocol.io). One URL connects your agent to real eBay sold prices, luxury watch market analysis, company KYC for the UK and Spain, SEC filings, patents, trademarks, government contracts and public auctions.
 
 This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.com/jdepablos) behind the Apify MCP gateway. There is nothing to install or host. Every tool queries its source live at request time and returns clean, typed JSON.
 
@@ -12,7 +12,7 @@ This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.c
 {
   "mcpServers": {
     "market-data-toolkit": {
-      "url": "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed"
+      "url": "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed,jdepablos/france-company-feed"
     }
   }
 }
@@ -21,7 +21,7 @@ This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.c
 **Claude Code**:
 
 ```bash
-claude mcp add --transport http market-data-toolkit "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed"
+claude mcp add --transport http market-data-toolkit "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed,jdepablos/france-company-feed"
 ```
 
 Auth is OAuth in the browser (an [Apify](https://apify.com) account, free tier works). You can also pass a token header instead: `Authorization: Bearer <APIFY_TOKEN>`.
@@ -45,7 +45,8 @@ Want fewer tools? Keep only the slugs you need in the `?tools=` list. Also publi
 
 | Tool | What it answers |
 |---|---|
-| [Companies House Feed (UK)](https://apify.com/jdepablos/companies-house-feed) | KYC-grade UK company checks: profile, officers, beneficial owners, charges, filings, risk flags. |
+| [Companies House Feed (UK)](https://apify.com/jdepablos/companies-house-feed,jdepablos/france-company-feed) | KYC-grade UK company checks: profile, officers, beneficial owners, charges, filings, risk flags. |
+| [French Company Data](https://apify.com/jdepablos/france-company-feed) | Official French registry: SIREN, head office, directors, establishments and risk flags. |
 | [BORME Company Feed (Spain)](https://apify.com/jdepablos/borme-company-feed) | Daily acts from Spain's Companies Registry: incorporations, appointments, dissolutions, insolvencies. |
 | [Insider Trading Feed](https://apify.com/jdepablos/insider-trading-feed) | Insider buys and sells for any US-listed stock (SEC Form 4). |
 | [SEC 13F Holdings Feed](https://apify.com/jdepablos/sec-13f-holdings-feed) | Any fund manager's portfolio: top holdings with weights and quarter-over-quarter changes. |
