@@ -45,7 +45,7 @@ Want fewer tools? Keep only the slugs you need in the `?tools=` list. Also publi
 
 | Tool | What it answers |
 |---|---|
-| [Companies House Feed (UK)](https://apify.com/jdepablos/companies-house-feed,jdepablos/france-company-feed) | KYC-grade UK company checks: profile, officers, beneficial owners, charges, filings, risk flags. |
+| [Companies House Feed (UK)](https://apify.com/jdepablos/companies-house-feed) | KYC-grade UK company checks: profile, officers, beneficial owners, charges, filings, risk flags. |
 | [French Company Data](https://apify.com/jdepablos/france-company-feed) | Official French registry: SIREN, head office, directors, establishments and risk flags. |
 | [BORME Company Feed (Spain)](https://apify.com/jdepablos/borme-company-feed) | Daily acts from Spain's Companies Registry: incorporations, appointments, dissolutions, insolvencies. |
 | [Insider Trading Feed](https://apify.com/jdepablos/insider-trading-feed) | Insider buys and sells for any US-listed stock (SEC Form 4). |
