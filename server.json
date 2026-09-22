@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.JdPG23/market-data-toolkit-mcp",
-  "description": "17 market-data tools for AI agents: eBay sold prices, company KYC, SEC filings, patents, auctions",
+  "description": "19 market-data tools for AI agents: company KYC, SEC filings, patents, auctions, tenders",
   "repository": {
     "url": "https://github.com/JdPG23/market-data-toolkit-mcp",
     "source": "github"
   },
-  "version": "1.5.0",
+  "version": "1.6.0",
   "websiteUrl": "https://apify.com/jdepablos",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed,jdepablos/france-company-feed,jdepablos/brand-domain-watch,jdepablos/eu-tender-watch"
+      "url": "https://mcp.apify.com?tools=jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed,jdepablos/france-company-feed,jdepablos/brand-domain-watch,jdepablos/eu-tender-watch"
     }
   ]
 }

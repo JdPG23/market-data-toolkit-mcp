@@ -1,6 +1,6 @@
 # Market Data Toolkit (MCP)
 
-21 live market-data tools for AI agents, served over the [Model Context Protocol](https://modelcontextprotocol.io). One URL connects your agent to real eBay sold prices, luxury watch market analysis, company KYC for the UK and Spain, SEC filings, patents, trademarks, government contracts and public auctions.
+19 live market-data tools for AI agents, served over the [Model Context Protocol](https://modelcontextprotocol.io). One URL connects your agent to second-hand marketplace prices, company KYC for the UK, France and Spain, SEC filings, patents, trademarks, public tenders and public auctions.
 
 This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.com/jdepablos) behind the Apify MCP gateway. There is nothing to install or host. Every tool queries its source live at request time and returns clean, typed JSON.
 
@@ -12,7 +12,7 @@ This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.c
 {
   "mcpServers": {
     "market-data-toolkit": {
-      "url": "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed,jdepablos/france-company-feed,jdepablos/brand-domain-watch"
+      "url": "https://mcp.apify.com?tools=jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed,jdepablos/france-company-feed,jdepablos/brand-domain-watch,jdepablos/eu-tender-watch"
     }
   }
 }
@@ -21,7 +21,7 @@ This is a **remote MCP server**: the tools run as [Apify Actors](https://apify.c
 **Claude Code**:
 
 ```bash
-claude mcp add --transport http market-data-toolkit "https://mcp.apify.com?tools=jdepablos/ebay-sold-price-appraiser,jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/chrono24-watch-analyzer,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/samgov-opportunities-feed,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed,jdepablos/france-company-feed,jdepablos/brand-domain-watch"
+claude mcp add --transport http market-data-toolkit "https://mcp.apify.com?tools=jdepablos/vinted-search-feed,jdepablos/second-hand-deal-scanner-es,jdepablos/borme-company-feed,jdepablos/spain-boe-auctions,jdepablos/trademark-watch-tmview,jdepablos/insider-trading-feed,jdepablos/clinical-trials-watch,jdepablos/startup-funding-feed,jdepablos/pokemon-card-price-checker,jdepablos/catawiki-deal-finder,jdepablos/patent-watch,jdepablos/airbnb-market-analyzer,jdepablos/booking-hotel-price-analyzer,jdepablos/sec-13f-holdings-feed,jdepablos/sec-8k-events-feed,jdepablos/companies-house-feed,jdepablos/france-company-feed,jdepablos/brand-domain-watch,jdepablos/eu-tender-watch"
 ```
 
 Auth is OAuth in the browser (an [Apify](https://apify.com) account, free tier works). You can also pass a token header instead: `Authorization: Bearer <APIFY_TOKEN>`.
@@ -34,11 +34,9 @@ Want fewer tools? Keep only the slugs you need in the `?tools=` list. Also publi
 
 | Tool | What it answers |
 |---|---|
-| [eBay Sold Price Appraiser](https://apify.com/jdepablos/ebay-sold-price-appraiser) | Real market value of any item from confirmed eBay sold listings: median, percentiles, trend, liquidity, cleaned comps. |
 | [Second-hand Deal Scanner](https://apify.com/jdepablos/second-hand-deal-scanner-es) | Underpriced listings on Vinted, Wallapop and Milanuncios vs real eBay sold values, ranked by estimated profit (ES/FR/DE/IT/UK). |
 | [Vinted Search Feed](https://apify.com/jdepablos/vinted-search-feed) | Clean Vinted listings and a price snapshot (median, quartiles) for any query, across 9 European markets. |
 | [Pokemon Card Price Checker](https://apify.com/jdepablos/pokemon-card-price-checker) | What a Pokemon card is actually worth, from confirmed sold listings. |
-| [Chrono24 Watch Analyzer](https://apify.com/jdepablos/chrono24-watch-analyzer) | Market analysis for any luxury watch: median asking price, percentiles, market depth, dealer mix. |
 | [Catawiki Deal Finder](https://apify.com/jdepablos/catawiki-deal-finder) | Live auction lots trading below Catawiki's own expert estimates. |
 
 ### Company intelligence and KYC
@@ -64,7 +62,6 @@ Want fewer tools? Keep only the slugs you need in the `?tools=` list. Also publi
 | [Brand Domain Watch](https://apify.com/jdepablos/brand-domain-watch) | Domains impersonating your brand: typosquats, phishing keywords and lookalikes registered in the last 30 days. |
 | [Clinical Trials Watch](https://apify.com/jdepablos/clinical-trials-watch) | New and updated clinical trials by condition, sponsor or drug. |
 | [EU Tender Watch](https://apify.com/jdepablos/eu-tender-watch) | New public tenders on TED (EU-wide) by keyword, CPV code and buyer country, with deadlines and estimated value. |
-| [SAM.gov Opportunities Feed](https://apify.com/jdepablos/samgov-opportunities-feed) | Live US federal contract opportunities with deadlines and set-aside labels. |
 | [Spain BOE Auctions](https://apify.com/jdepablos/spain-boe-auctions) | Spanish judicial and tax auctions with appraisals, charges and asset details. |
 
 ## Pricing
