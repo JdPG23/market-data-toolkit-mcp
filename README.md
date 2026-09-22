@@ -63,6 +63,7 @@ Want fewer tools? Keep only the slugs you need in the `?tools=` list. Also publi
 | [Trademark Watch (TMview)](https://apify.com/jdepablos/trademark-watch-tmview) | New trademark filings across USPTO, EUIPO, WIPO and 70+ offices, with opposition deadlines. |
 | [Brand Domain Watch](https://apify.com/jdepablos/brand-domain-watch) | Domains impersonating your brand: typosquats, phishing keywords and lookalikes registered in the last 30 days. |
 | [Clinical Trials Watch](https://apify.com/jdepablos/clinical-trials-watch) | New and updated clinical trials by condition, sponsor or drug. |
+| [EU Tender Watch](https://apify.com/jdepablos/eu-tender-watch) | New public tenders on TED (EU-wide) by keyword, CPV code and buyer country, with deadlines and estimated value. |
 | [SAM.gov Opportunities Feed](https://apify.com/jdepablos/samgov-opportunities-feed) | Live US federal contract opportunities with deadlines and set-aside labels. |
 | [Spain BOE Auctions](https://apify.com/jdepablos/spain-boe-auctions) | Spanish judicial and tax auctions with appraisals, charges and asset details. |
 
